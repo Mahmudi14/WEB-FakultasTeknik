@@ -1,0 +1,899 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* === Navbar === */
+.navbar {
+    background-color: #3649a7;
+    color: #fff;
+    padding: 10px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    color: white;
+    font-weight: bold;
+    gap: 10px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.nav-links li {
+    position: relative;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    display: block;
+}
+
+.nav-links .dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    background-color: white;
+    color: black;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    min-width: 200px;
+    z-index: 999;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.dropdown-menu li a {
+    color: black;
+    padding: 10px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-menu li a:hover {
+    background-color: #f1f1f1;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.member-icon {
+    color: white;
+    cursor: pointer;
+}
+
+.search-box {
+    padding: 6px 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+/* === Hero Section === */
+.container {
+    max-width: 900px;
+    width: 100%;
+    margin: 50px auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.hero-image {
+    width: 100%;
+    height: 300px;
+    background-color: #ddd;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #3649a7;
+    margin-bottom: 10px;
+}
+
+.description {
+    font-size: 0.9rem;
+    color: #555;
+    line-height: 1.6;
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+/* === Sejarah Section === */
+.sejarah-section {
+    background-image: url("path/to/gedung.jpg"); /* ganti dengan path gambar asli */
+    background-size: cover;
+    background-position: center;
+    padding: 60px 20px;
+    position: relative;
+    z-index: 1;
+    color: #3649a7;
+    text-align: center;
+}
+
+.sejarah-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.7);
+    z-index: -1;
+}
+
+.sejarah-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.sejarah-line {
+    border: none;
+    height: 4px;
+    width: 80%;
+    margin: 0 auto 30px auto;
+    border-radius: 10px;
+}
+
+.sejarah-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.sejarah-gambar {
+    background-color: #ddd;
+    width: 90%;
+    max-width: 900px;
+    height: 250px;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.sejarah-paragraf {
+    background-color: rgba(255, 255, 255, 0.9);
+    width: 90%;
+    max-width: 900px;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    color: #1a38d6;
+    text-align: justify;
+    font-size: 0.9rem;
+}
+
+/* === Visi Misi Section === */
+.visimisi-section {
+    background-image: url("path/to/gedung.jpg"); /* ganti path sesuai gambarmu */
+    background-size: cover;
+    background-position: center;
+    padding: 60px 20px;
+    position: relative;
+    z-index: 1;
+    color: #1a38d6;
+    text-align: center;
+}
+
+.visimisi-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.7);
+    z-index: -1;
+}
+
+.visimisi-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.visimisi-line {
+    border: none;
+    height: 4px;
+    width: 80%;
+    background-color: #1a38d6;
+    margin: 0 auto 40px auto;
+    border-radius: 10px;
+}
+
+.visimisi-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.card-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 280px;
+}
+
+.card-title {
+    background-color: #e0e7ff;
+    padding: 10px 30px;
+    border-radius: 15px;
+    font-weight: bold;
+    font-size: 1.3rem;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    color: #1a38d6;
+    margin-bottom: 20px;
+}
+
+.card-body {
+    background-color: #f1f3ff;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    text-align: justify;
+    font-size: 0.9rem;
+}
+
+/* === Pimpinan Section === */
+.pimpinan-section {
+    background-image: url("path/to/gedung.jpg"); /* sesuaikan path gambar */
+    background-size: cover;
+    background-position: center;
+    padding: 60px 20px;
+    position: relative;
+    z-index: 1;
+    color: #1a38d6;
+    text-align: center;
+}
+
+.pimpinan-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.7);
+    z-index: -1;
+}
+
+.pimpinan-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.pimpinan-line {
+    border: none;
+    height: 4px;
+    width: 80%;
+    background-color: #1a38d6;
+    margin: 0 auto 40px auto;
+    border-radius: 10px;
+}
+
+.pimpinan-wrapper {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+.dekan-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.dekan-img {
+    width: 200px;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.dekan-label {
+    background-color: #e0e7ff;
+    padding: 5px 20px;
+    border-radius: 10px;
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 1rem;
+    color: #1a38d6;
+}
+
+.dekan-nama {
+    background-color: #f1f3ff;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #1a38d6;
+    padding: 10px 30px;
+    border-radius: 15px;
+    margin-top: 10px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.wakil-box {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+}
+
+.wakil-item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.wakil-label {
+    background-color: #e0e7ff;
+    padding: 5px 15px;
+    border-radius: 10px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: #1a38d6;
+    margin-bottom: 5px;
+}
+
+.wakil-nama {
+    background-color: #f1f3ff;
+    padding: 10px 25px;
+    border-radius: 15px;
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #1a38d6;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* === Struktur Section === */
+.struktur-section {
+    padding: 40px 20px;
+    text-align: center;
+    background: url("bg.jpg") no-repeat center center;
+    background-size: cover;
+    position: relative;
+}
+
+.struktur-title {
+    font-size: 2em;
+    font-weight: bold;
+    color: #1d3aca;
+    margin-bottom: 30px;
+    border-bottom: 3px solid #1d3aca;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.struktur-container {
+    background-color: rgba(255, 255, 255, 0.8);
+    margin: 0 auto;
+    padding: 40px;
+    border-radius: 20px;
+    max-width: 80%;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.struktur-image {
+    width: 100%;
+    max-width: 700px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.gambar-label {
+    font-size: 1.5em;
+    color: #1d3aca;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+/* === Kerjasama Section === */
+.kerjasama-section {
+    padding: 40px 20px;
+    text-align: center;
+    background: url("bg.jpg") no-repeat center center;
+    background-size: cover;
+    position: relative;
+}
+
+.kerjasama-title {
+    font-size: 2em;
+    font-weight: bold;
+    color: #1d3aca;
+    margin-bottom: 30px;
+    border-bottom: 3px solid #1d3aca;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.kerjasama-container {
+    background-color: rgba(255, 255, 255, 0.9);
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 15px;
+    max-width: 95%;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    overflow-x: auto;
+}
+
+.kerjasama-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.kerjasama-table thead {
+    background-color: #1d3aca;
+    color: white;
+}
+
+.kerjasama-table th,
+.kerjasama-table td {
+    padding: 12px 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+.kerjasama-table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+/* === Indikator Kinerja Section === */
+.indikator-section {
+    padding: 40px 20px;
+    text-align: center;
+    background: url("bg.jpg") no-repeat center center;
+    background-size: cover;
+    position: relative;
+}
+
+.indikator-title {
+    font-size: 2em;
+    font-weight: bold;
+    color: #1d3aca;
+    margin-bottom: 30px;
+    border-bottom: 3px solid #1d3aca;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.indikator-container {
+    background-color: rgba(255, 255, 255, 0.9);
+    margin: 0 auto;
+    padding: 40px;
+    border-radius: 20px;
+    max-width: 800px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.indikator-container p {
+    color: #333;
+    font-size: 1em;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+/* === Program Study === */
+.program-section {
+    padding: 50px 20px;
+    background: url("bg.jpg") no-repeat center center;
+    background-size: cover;
+    text-align: center;
+}
+
+.program-title {
+    font-size: 2em;
+    font-weight: bold;
+    color: #1d3aca;
+    margin-bottom: 30px;
+    border-bottom: 3px solid #1d3aca;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.program-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.program-column {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.program-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.program-img {
+    width: 60px;
+    height: 60px;
+    background-color: #f1f1f1;
+    border-radius: 15px;
+    flex-shrink: 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.program-info {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 15px 25px;
+    border-radius: 15px;
+    flex: 1;
+    text-align: left;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.program-role {
+    display: inline-block;
+    background: #e7efff;
+    color: #1d3aca;
+    font-size: 0.8em;
+    font-weight: bold;
+    padding: 4px 10px;
+    border-radius: 10px;
+}
+
+.program-name {
+    font-size: 0.9em;
+    background: #eee;
+    padding: 4px 10px;
+    border-radius: 10px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+
+.program-desc {
+    font-weight: bold;
+    color: #1d3aca;
+    font-size: 1.2em;
+}
+
+/* === Kalender Akademik === */
+.calendar-section {
+    padding: 50px 20px;
+    background: url("bg.jpg") no-repeat center center;
+    background-size: cover;
+    text-align: center;
+}
+
+.calendar-title {
+    font-size: 2em;
+    font-weight: bold;
+    color: #1d3aca;
+    margin-bottom: 30px;
+    border-bottom: 3px solid #1d3aca;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.calendar-grid {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.calendar-column {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    flex: 1;
+}
+
+.calendar-block {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.calendar-img {
+    width: 100px;
+    height: 100px;
+    background-color: #f1f1f1;
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    color: #1d3aca;
+}
+
+.calendar-dates {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding-top: 5px;
+}
+
+.calendar-date {
+    color: red;
+    font-weight: bold;
+}
+
+.calendar-detail {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.calendar-month {
+    font-weight: bold;
+    color: red;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.calendar-desc {
+    color: #1d3aca;
+    font-weight: 500;
+}
+
+/* === Tenaga Kependidikan === */
+.staff-section {
+    padding: 50px 20px;
+    background: url("bg.jpg") no-repeat center center;
+    background-size: cover;
+    text-align: center;
+}
+
+.staff-title {
+    font-size: 2em;
+    font-weight: bold;
+    color: #1d3aca;
+    margin-bottom: 30px;
+    border-bottom: 3px solid #1d3aca;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.staff-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.staff-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.staff-img {
+    width: 160px;
+    height: 200px;
+    background-color: #f1f1f1;
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    color: #1d3aca;
+    margin-bottom: 10px;
+}
+
+.staff-desc {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 10px 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    font-weight: bold;
+    color: #1d3aca;
+    text-align: center;
+}
+
+.staff-desc span {
+    font-size: 0.9em;
+    color: #555;
+}
+
+/* === Layanan === */
+.layanan-section {
+    padding: 50px 20px;
+    background: url("bg.jpg") no-repeat center center;
+    background-size: cover;
+    text-align: center;
+}
+
+.layanan-title {
+    font-size: 2em;
+    font-weight: bold;
+    color: #1d3aca;
+    margin-bottom: 30px;
+    border-bottom: 3px solid #1d3aca;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.layanan-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.layanan-box {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 20px;
+    font-weight: bold;
+    color: #1d3aca;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    cursor: pointer;
+}
+
+.layanan-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+/* === Pengumuman === */
+.pengumuman-section {
+    padding: 60px 20px;
+    background: url("bg.jpg") no-repeat center center;
+    background-size: cover;
+    text-align: center;
+}
+
+.pengumuman-title {
+    font-size: 2em;
+    font-weight: bold;
+    color: #1d3aca;
+    margin-bottom: 30px;
+    border-bottom: 3px solid #1d3aca;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.pengumuman-box {
+    max-width: 1000px;
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 20px 30px;
+    border-radius: 20px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+    color: #1d3aca;
+    text-align: justify;
+    line-height: 1.6;
+}
+
+/* === Pengumuman === */
+.pengumuman-section {
+    padding: 60px 20px;
+    background: url("bg.jpg") no-repeat center center;
+    background-size: cover;
+    text-align: center;
+}
+
+.pengumuman-title {
+    font-size: 2em;
+    font-weight: bold;
+    color: #1d3aca;
+    margin-bottom: 30px;
+    border-bottom: 3px solid #1d3aca;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.pengumuman-box {
+    max-width: 1000px;
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 20px 30px;
+    border-radius: 20px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+    color: #1d3aca;
+    text-align: justify;
+    line-height: 1.6;
+}
+/* === HKI Section === */
+.hki-section {
+    padding: 60px 20px;
+    background: url("bg.jpg") no-repeat center center;
+    background-size: cover;
+    text-align: center;
+}
+
+.hki-title {
+    font-size: 2em;
+    font-weight: bold;
+    color: #1d3aca;
+    margin-bottom: 30px;
+    border-bottom: 3px solid #1d3aca;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.hki-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.hki-card {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 20px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    width: 280px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hki-img {
+    background-color: #e0e0e0;
+    width: 100%;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 1.3em;
+    color: #1d3aca;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.hki-desc {
+    padding: 15px;
+    color: #333;
+    font-size: 0.95em;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
