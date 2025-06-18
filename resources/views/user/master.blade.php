@@ -364,7 +364,9 @@
               <li><a href="{{ url('/berita') }}">Berita</a></li>
             </ul>
           </li>
-          <li><a href="{{ url('/berita') }}">Bantuan</a></li>
+          <li><a href="{{ url('https://drive.google.com/file/d/1qeir0S_WkfW8V_W1Q80_JEe52KgXbAoF/view?usp=sharing') }}"
+              target="_blank">Bantuan</a>
+          </li>
         </ul>
       </div>
       <button class="hamburger-menu" aria-label="Toggle Menu">
